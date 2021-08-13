@@ -1,0 +1,3 @@
+print("hello xlua")
+
+print(1+3)
