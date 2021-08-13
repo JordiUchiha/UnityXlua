@@ -8,9 +8,11 @@ public class CallLuaFile : MonoBehaviour {
     private LuaEnv luaeav;
 	// Use this for initialization
 	void Start () {
-        TextAsset luaFile = Resources.Load<TextAsset>("HelloXLua.lua");
         luaeav = new LuaEnv();
-        luaeav.DoString(luaFile.text);
+        //TextAsset luaFile = Resources.Load<TextAsset>("HelloXLua.lua");
+        //luaeav.DoString(luaFile.text);
+
+        luaeav.DoString("require 'HelloXLua'");
 	}
 	
 	// Update is called once per frame
