@@ -1,0 +1,5 @@
+a = 100
+name = "Jordi"
+
+isWin = false
+
