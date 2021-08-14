@@ -25,8 +25,15 @@ public class CSharpCallLua : MonoBehaviour {
         print(isWin);
 
         //值拷贝 代价比较大 修改字段不会同步到table
-        Person p = luaeav.Global.Get<Person>("Person");
+        IPerson p = luaeav.Global.Get<IPerson>("Person");
         print(p.name);
+        p.name = "niu";
+        print(p.name);
+        p.test();
+
+        p.testArg(1,5); //参数对应
+
+        p.testFunc(10, 1);
     }
 
     // Update is called once per frame
@@ -34,9 +41,16 @@ public class CSharpCallLua : MonoBehaviour {
 		
 	}
 
-    class Person
+    [CSharpCallLua]
+    public interface IPerson
     {
-        public string name;
-        public int age;
+        string name { get; set; }
+        int age { get; set; }
+
+        void test();
+
+        void testArg(int a,int b);
+
+        void testFunc(int a, int b);
     }
 }
