@@ -23,10 +23,20 @@ public class CSharpCallLua : MonoBehaviour {
 
         bool isWin = luaeav.Global.Get<bool>("isWin");
         print(isWin);
+
+        //值拷贝 代价比较大 修改字段不会同步到table
+        Person p = luaeav.Global.Get<Person>("Person");
+        print(p.name);
     }
 
     // Update is called once per frame
     void Update () {
 		
 	}
+
+    class Person
+    {
+        public string name;
+        public int age;
+    }
 }

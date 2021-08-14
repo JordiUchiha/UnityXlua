@@ -3,3 +3,8 @@ name = "Jordi"
 
 isWin = false
 
+Person=
+{
+	name="jordi",
+	age = 18
+}
