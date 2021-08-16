@@ -260,6 +260,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\01\RunLua.cs" />
+    <Compile Include="Assets\Scripts\02\LuaCallCsTest.cs" />
+    <Compile Include="Assets\Scripts\03\CallLuaFile.cs" />
+    <Compile Include="Assets\Scripts\04\CreateLoader.cs" />
+    <Compile Include="Assets\Scripts\05\CSharpCallLua.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
@@ -309,6 +313,9 @@
     <Compile Include="Assets\XLua\util\Xxtea.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\CSharpCallLua.lua.txt" />
+    <None Include="Assets\Resources\HelloXLua.lua.txt" />
+    <None Include="Assets\StreamingAssets\TestDefineLoader.lua.txt" />
     <None Include="Assets\XLua\CHANGELOG.txt" />
     <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
     <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />

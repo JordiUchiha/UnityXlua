@@ -328,6 +328,9 @@
     <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\CSharpCallLua.lua.txt" />
+    <None Include="Assets\Resources\HelloXLua.lua.txt" />
+    <None Include="Assets\StreamingAssets\TestDefineLoader.lua.txt" />
     <None Include="Assets\XLua\CHANGELOG.txt" />
     <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
     <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
