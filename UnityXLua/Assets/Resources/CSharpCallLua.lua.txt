@@ -14,7 +14,9 @@ Person=
 
 	testArg = function(self,a,b)
 		print(a+b)
-	end
+	end,
+
+	2,3,4,5
 }
 
 function Person:testFunc(a,b)

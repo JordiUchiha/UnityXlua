@@ -15,25 +15,20 @@ public class CSharpCallLua : MonoBehaviour {
 
         luaeav.DoString("require 'CSharpCallLua'");
 
-        int a = luaeav.Global.Get<int>("a");
-        print(a);
+        //映射到 Dictionary List  只映射table中键值对
+        Dictionary<string, object> dict = luaeav.Global.Get<Dictionary<string, object>>("Person");
 
-        string name = luaeav.Global.Get<string>("name");
-        print(name);
+        foreach(var v in dict)
+        {
+            print(v.Key+v.Value);
+        }
 
-        bool isWin = luaeav.Global.Get<bool>("isWin");
-        print(isWin);
-
-        //值拷贝 代价比较大 修改字段不会同步到table
-        IPerson p = luaeav.Global.Get<IPerson>("Person");
-        print(p.name);
-        p.name = "niu";
-        print(p.name);
-        p.test();
-
-        p.testArg(1,5); //参数对应
-
-        p.testFunc(10, 1);
+        //映射到List 只映射table中的值
+        List<object> list = luaeav.Global.Get<List<object>>("Person");
+        foreach(var v in list)
+        {
+            print(v);
+        }
     }
 
     // Update is called once per frame
